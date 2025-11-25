@@ -28,7 +28,7 @@ html {
     html {
         margin: 1rem auto;
         max-width: 720px;
-        font-size: calc(100% * 20 / 16);
+        /*font-size: calc(100% * 20 / 16);*/
     }
 }
 
