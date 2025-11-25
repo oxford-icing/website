@@ -177,6 +177,13 @@ h3 {
     line-height: 1.0;
 }
 
+summary {
+    font-family: 'Archivo Narrow';
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.0;
+}
+
 /*Lists*/
 li::marker {
     color: var(--accent);
