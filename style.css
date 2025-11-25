@@ -19,7 +19,7 @@
 /*Responsive layout*/
 html {
     font-size: 100%;
-    line-height: 1.35;
+    line-height: 1.5;
     margin: 1rem 1rem;
     font-family: "Inter";
 }
@@ -109,12 +109,13 @@ h2 {
 
 h3 {
     font-size: 1.25rem;
+    line-height: 0.75rem;
 }
 
 /*Lists*/
 li {
     list-style-type: square;
-    padding: 0.2rem 0;
+    line-height: 1.5rem;
 }
 li::marker {
     color: var(--accent);
