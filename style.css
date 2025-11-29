@@ -1,9 +1,25 @@
 /*Colours*/
 :root {
-    --fg-color: #ffffff;
-    --bg-color: #002147;
-    --accent: #B9D6F2;
-    --bold: #FB5607;
+    --fg-color: #f2f0f0;  /*Oxford off white*/
+    --bg-color: #002147;  /*Oxford blue*/
+    --accent: #B9D6F2;    /*Oxford sky blue*/
+    --bold: #FB5607;      /*Oxford orange*/
+}
+
+/*Apply to all*/
+html {
+    box-sizing: border-box;
+    background: var(--bg-color);
+    color: var(--fg-color);
+}
+
+/* Light mode */
+:root:has(input:checked):has(.lightMode){
+    --accent: #1D42A6;
+}
+*:has(input:checked):has(.lightMode){
+    background: var(--fg-color);
+    color: var(--bg-color);
 }
 
 /*Fonts*/
@@ -123,13 +139,6 @@ html {
     }
 }
 
-/*Apply to all*/
-* {
-    box-sizing: border-box;
-    background: var(--bg-color);
-    color: var(--fg-color);
-}
-
 /*Hover*/
 a {
     transition: 0.25s;
@@ -191,3 +200,4 @@ li::marker {
 ul {
     padding-left: 1.25rem;
 }
+
