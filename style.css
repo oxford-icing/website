@@ -1,104 +1,49 @@
-/*Colours*/
+/*Variables*/
 :root {
-    --bg-color: #f2f0f0;  /*Oxford off white*/
-    --fg-color: #002147;  /*Oxford blue*/
-    --accent: #1D42A6;    /*Oxford royal blue*/
+    --bg-color: #002147;  /*Oxford off white*/
+    --fg-color: #f2f0f0;  /*Oxford blue*/
+    --accent: #B9D6F2;    /*Oxford royal blue*/
     --bold: #FB5607;      /*Oxford orange*/
-}
 
-/*Apply to all*/
-html {
-    box-sizing: border-box;
-    background: var(--bg-color);
-    color: var(--fg-color);
-}
-h1, h2 {
-    color: var(--bold);
-}
-
-/* Dark mode */
-:root:has(input:checked):has(.darkMode){
-    --accent: #B9D6F2;    /*Oxford sky blue*/
-}
-*:has(input:checked):has(.darkMode){
-    background: var(--fg-color);
-    color: var(--bg-color);
-    h1, h2 {
-        color: var(--bg-color);
-    }
+    --content-width: 48rem;
+    --transition-time: 0.3s;
 }
 
 /*Fonts*/
-/* inter-regular - latin */
+/* roboto-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/inter-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/roboto-v51-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* inter-italic - latin */
+/* roboto-italic - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: 'Roboto';
   font-style: italic;
   font-weight: 400;
-  src: url('./fonts/inter-v20-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/roboto-v51-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* inter-700 - latin */
+/* roboto-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
-  font-style: bold;
-  font-weight: 700;
-  src: url('./fonts/inter-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* inter-700italic - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
-  font-style: italic;
-  font-weight: 700;
-  src: url('./fonts/inter-v20-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* archivo-narrow-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Archivo Narrow';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/archivo-narrow-v35-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* archivo-narrow-italic - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Archivo Narrow';
-  font-style: italic;
-  font-weight: 400;
-  src: url('./fonts/archivo-narrow-v35-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* archivo-narrow-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Archivo Narrow';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/archivo-narrow-v35-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/roboto-v51-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* archivo-narrow-700italic - latin */
+/* roboto-700italic - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Archivo Narrow';
+  font-family: 'Roboto';
   font-style: italic;
   font-weight: 700;
-  src: url('./fonts/archivo-narrow-v35-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/roboto-v51-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* space-grotesk-regular - latin */
@@ -107,7 +52,7 @@ h1, h2 {
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/space-grotesk-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/space-grotesk-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* space-grotesk-700 - latin */
@@ -116,151 +61,133 @@ h1, h2 {
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/space-grotesk-v22-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/space-grotesk-v22-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* ibm-plex-sans-regular - latin */
+/* jetbrains-mono-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'IBM Plex Sans';
+  font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/ibm-plex-sans-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* ibm-plex-sans-italic - latin */
+/* jetbrains-mono-italic - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'IBM Plex Sans';
+  font-family: 'JetBrains Mono';
   font-style: italic;
   font-weight: 400;
-  src: url('./fonts/ibm-plex-sans-v23-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/jetbrains-mono-v24-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* ibm-plex-sans-700 - latin */
+/* jetbrains-mono-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'IBM Plex Sans';
+  font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/ibm-plex-sans-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/jetbrains-mono-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* ibm-plex-sans-700italic - latin */
+/* jetbrains-mono-700italic - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'IBM Plex Sans';
+  font-family: 'JetBrains Mono';
   font-style: italic;
   font-weight: 700;
-  src: url('./fonts/ibm-plex-sans-v23-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/jetbrains-mono-v24-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/*Responsive layout*/
+/*Cascade*/
 html {
-    font-size: 100%;
-    line-height: 1.5;
-    margin: 1rem 1rem;
-    font-family: 'IBM Plex Sans';
+    font-size: 13pt;
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background: var(--bg-color);
+    color: var(--fg-color);
+    transition: var(--transition-time);
+}
+@media screen and (max-width: 720px) {
+	html {
+		font-size: 11pt;
+	}
 }
 
-@media (min-width: calc(720px + 2rem)) {
-    html {
-        margin: 1rem auto;
-        max-width: 720px;
-        /*font-size: calc(100% * 20 / 16);*/
-    }
-}
-
-/*Animations*/
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-@-moz-keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-@-webkit-keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-/*Hover*/
+/*Links*/
 a {
-    transition: 0.25s;
+    transition: var(--transition-time);
     color: var(--accent);
 }
 a:hover {
     color: var(--bold);
 }
 
-/*Body*/
-body {
-    font-family: inherit;
-    animation: fade ease 2s;
-    -moz-animation: fade ease 2s;
-    -webkit-animation: fade ease 2s;
-    -o-animation: fade ease 2s;
-    -ms-animation: fade ease 2s;
-}
-
-/*Text styles*/
-p {
-    font-size: 1rem;
-}
-
+/*Headings*/
 h1, h2, h3, summary {
-    font-family: 'Space Grotesk';
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
 }
-
 h1 {
     font-size: 2.5rem;
     line-height: 1.0;
 }
-
 h2 {
-    padding-bottom: 0.2rem;
-    border-bottom: 1px solid var(--bold);
+    /* padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--accent); */
+    padding: 0.5rem 1rem;
+    background-color: var(--accent);
+    color: var(--bg-color);
     font-size: 1.5rem;
     line-height: 1.2;
 }
-
 h3 {
     font-size: 1.25rem;
     line-height: 1.0;
 }
-
 summary {
     font-size: 1.25rem;
     line-height: 1.0;
 }
 
 /*Lists*/
-li::marker {
-    color: var(--accent);
-}
 ul {
     padding-left: 1.25rem;
 }
 
-img {
-    transition: 0.25s;
+::selection {
+	color: var(--fg-color);
+	background-color: var(--bold);
 }
-img:hover {
+
+/*Utilities*/
+.wrapper {
+	margin-inline: auto;
+	padding-inline: 2rem;
+	padding-top: 2rem;
+	max-width: var(--content-width);
+}
+
+.grow-on-hover {
+    transition: var(--transition-time);
+}
+.grow-on-hover:hover {
     scale: 1.05;
+}
+
+.logo {
+    height: 4rem;
+}
+
+.cover-image {
+    width: 100%;
+    height: 12rem;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
