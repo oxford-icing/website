@@ -82,10 +82,6 @@ html {
 	}
 }
 
-.gradient-background {
-    background-image: linear-gradient(var(--oxford-blue), var(--royal-blue));
-}
-
 /*Links*/
 a {
     transition: var(--transition-time);
@@ -161,4 +157,9 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.gradient-background {
+    background-image: linear-gradient(150deg, var(--oxford-blue) 0%, var(--royal-blue) 200%);
+    background-attachment: fixed;
 }
