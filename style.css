@@ -1,9 +1,11 @@
 /*Variables*/
 :root {
-    --bg-color: #002147;  /*Oxford off white*/
-    --fg-color: #f2f0f0;  /*Oxford blue*/
-    --accent: #B9D6F2;    /*Oxford royal blue*/
-    --bold: #FB5607;      /*Oxford orange*/
+    --oxford-blue: #002147;
+    --off-white: #f2f0f0;
+
+    --royal-blue: #1d42a6;
+    --light-blue: #B9D6F2;
+    --orange: #FB5607;
 
     --content-width: 48rem;
     --transition-time: 0.3s;
@@ -70,8 +72,8 @@ html {
     line-height: 1.7;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    background: var(--bg-color);
-    color: var(--fg-color);
+    background: var(--oxford-blue);
+    color: var(--off-white);
     transition: var(--transition-time);
 }
 @media screen and (max-width: 720px) {
@@ -80,13 +82,17 @@ html {
 	}
 }
 
+.gradient-background {
+    background-image: linear-gradient(var(--oxford-blue), var(--royal-blue));
+}
+
 /*Links*/
 a {
     transition: var(--transition-time);
-    color: var(--accent);
+    color: var(--light-blue);
 }
 a:hover {
-    color: var(--bold);
+    color: var(--orange);
 }
 
 /*Headings*/
@@ -99,11 +105,8 @@ h1 {
     line-height: 1.0;
 }
 h2 {
-    /* padding-bottom: 0.2rem;
-    border-bottom: 1px solid var(--accent); */
-    padding: 0.5rem 1rem;
-    background-color: var(--accent);
-    color: var(--bg-color);
+    padding: 0.5rem 0;
+    border-bottom: solid 2px;
     font-size: 1.5rem;
     line-height: 1.2;
 }
@@ -122,8 +125,8 @@ ul {
 }
 
 ::selection {
-	color: var(--fg-color);
-	background-color: var(--bold);
+	color: var(--off-white);
+	background-color: var(--orange);
 }
 
 /*Utilities*/
