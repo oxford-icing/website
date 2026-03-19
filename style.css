@@ -9,6 +9,7 @@
 
     --content-width: 48rem;
     --transition-time: 0.3s;
+    --radius: 12px;
 }
 
 /*Fonts*/
@@ -98,26 +99,21 @@ h1, h2, h3, summary {
 }
 h1 {
     font-size: 2.5rem;
-    line-height: 1.0;
+    line-height: 1.4;
 }
 h2 {
     padding: 0.5rem 0;
     border-bottom: solid 2px;
     font-size: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 h3 {
     font-size: 1.25rem;
-    line-height: 1.0;
+    line-height: 1.4;
 }
 summary {
     font-size: 1.25rem;
-    line-height: 1.0;
-}
-
-/*Lists*/
-ul {
-    padding-left: 1.25rem;
+    line-height: 1.4;
 }
 
 ::selection {
@@ -128,8 +124,9 @@ ul {
 /*Utilities*/
 .wrapper {
 	margin-inline: auto;
-	padding-inline: 2rem;
-	padding-top: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+	padding: 2rem;
 	max-width: var(--content-width);
 }
 
@@ -148,18 +145,44 @@ ul {
     height: 2rem;
 }
 
-.cover-image {
+.cover-image-container {
     width: 100%;
     height: 10rem;
 }
 
-.image-container img {
+.cover-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .gradient-background {
-    background-image: linear-gradient(150deg, var(--oxford-blue) 0%, var(--royal-blue) 200%);
+    background-image: linear-gradient(150deg, var(--oxford-blue) 0%, var(--royal-blue) 150%);
     background-attachment: fixed;
+}
+
+.radius {
+    border-radius: var(--radius);
+}
+
+.grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.large {
+    font-size: 18pt;
+}
+
+.website-credit {
+    font-size: 0.75rem;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
 }
