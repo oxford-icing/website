@@ -6,6 +6,7 @@
     --royal-blue: #1d42a6;
     --light-blue: #B9D6F2;
     --orange: #FB5607;
+    --yellow-ochre: #E2C044;
 
     --content-width: 48rem;
     --transition-time: 0.3s;
@@ -185,4 +186,43 @@ summary {
     font-size: 0.75rem;
     padding-top: 5rem;
     padding-bottom: 2.5rem;
+}
+
+.card.container {
+    width: 100%;
+    margin-top: 1rem;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    transition: var(--transition-time);
+    vertical-align: top;
+}
+
+.card.container:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card.content {
+    --lr-padding: 1.5rem;
+    --tb-padding: 0.5rem;
+    width: calc(100% - 2 * var(--lr-padding));
+    padding-left: var(--lr-padding);
+    padding-right: var(--lr-padding);
+    padding-top: var(--tb-padding);
+    padding-bottom: var(--tb-padding);
+}
+
+.card.link {
+    text-decoration: none;
+}
+
+.light-blue {
+    background-image: linear-gradient(150deg, var(--light-blue), var(--royal-blue) 300%);
+    background-color: var(--light-blue);
+    color: var(--oxford-blue);
+}
+
+.orange {
+    background-image: linear-gradient(150deg, var(--yellow-ochre) -200%, var(--orange) 100%);
+    background-color: var(--orange);
+    color: var(--off-white);
 }
