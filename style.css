@@ -134,11 +134,19 @@ summary {
 .grow-on-hover {
     transition: var(--transition-time);
 }
+
 .grow-on-hover:hover {
     scale: 1.05;
 }
 
-.logo {
+.logo-container {
+    width: 100%;
+    text-align: right;
+}
+
+.logo-icon {
+    display: inline-block;
+    margin-left: 0.5rem;
     height: 4rem;
 }
 
@@ -149,6 +157,8 @@ summary {
 .cover-image-container {
     width: 100%;
     height: 10rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .cover-image {
