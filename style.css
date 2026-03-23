@@ -71,7 +71,7 @@
 /*Cascade*/
 html {
     font-size: 13pt;
-    line-height: 1.7;
+    line-height: 1.5;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     background: var(--oxford-blue);
